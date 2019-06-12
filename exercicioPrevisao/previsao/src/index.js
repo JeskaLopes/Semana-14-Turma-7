@@ -25,31 +25,61 @@ const previsao31_05 = {
     }
 }
 
+//componente funcional não precisa de this
+const Titulo = (props) =>{
+    return(
+    <div>
+        <h1 className="previsao__data">{props.data}</h1>
+        <h2 className="previsao__resumo">{props.resumo}</h2>
+    </div>
+    )
+}
+
+const PrevisaoImg = (props) =>{
+    return(
+        <img className="previsao__img" src={props.imagem}/>
+    )
+}
+
+const Temperatura = (props) =>{
+    return(
+        <table className="previsao-temperatura" >
+            <tr className="previsao-temperatura__linha">
+                <th>
+                    Máxima:
+                </th>
+            <td>
+                {props.temperatura.max} ºc
+            </td>
+            </tr>
+                <tr className="previsao-temperatura__linha">
+                    <th>
+                        Mínima:
+                    </th>
+                    <td>
+                        {props.temperatura.min} ºc
+                    </td>
+                </tr>
+            </table> 
+    )
+}
+
+
+//class precisa de this
 class Card extends React.Component{
     render() {
         return(
             <div className="previsao">
-                <h1 className="previsao__data">{this.props.data}</h1>
-                <h2 className="previsao__resumo">{this.props.resumo}</h2>
-                <img className="previsao__img" src={this.props.imagem}/>
-                <table className="previsao-temperatura" >
-                    <tr className="previsao-temperatura__linha">
-                        <th>
-                            Máxima:
-                        </th>
-                        <td>
-                            {this.props.temperatura.max} ºc
-                        </td>
-                    </tr>
-                    <tr className="previsao-temperatura__linha">
-                        <th>
-                            Mínima:
-                        </th>
-                        <td>
-                            {this.props.temperatura.min} ºc
-                        </td>
-                    </tr>
-                </table>  
+                <Titulo
+                    data={this.props.data}
+                    resumo={this.props.resumo}
+                />
+                <PrevisaoImg
+                    imagem={this.props.imagem}
+                />
+                < Temperatura 
+                    temperatura={this.props.temperatura}
+                /> 
             </div>
         )
     }
