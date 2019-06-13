@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Titulo from './titulo';
-import PrevisaoImg from './previsao'
-import Temperatura from './temperatura'
+import Card from './previsao'
 import * as serviceWorker from './serviceWorker';
 
 
@@ -27,28 +25,10 @@ const previsao31_05 = {
     }
 }
 
+
 //componente funcional não precisa de this
-
-
 //class precisa de this
-class Card extends React.Component{
-    render() {
-        return(
-            <div className="previsao">
-                <Titulo
-                    data={this.props.data}
-                    resumo={this.props.resumo}
-                />
-                <PrevisaoImg
-                    imagem={this.props.imagem}
-                />
-                < Temperatura 
-                    temperatura={this.props.temperatura}
-                /> 
-            </div>
-        )
-    }
-}
+
 
 class Container extends React.Component{
     render(){
