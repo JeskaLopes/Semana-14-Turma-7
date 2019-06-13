@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Titulo from './titulo';
+import PrevisaoImg from './previsao'
+import Temperatura from './temperatura'
 import * as serviceWorker from './serviceWorker';
-
 
 
 const previsao31_05 = {
@@ -26,43 +28,6 @@ const previsao31_05 = {
 }
 
 //componente funcional não precisa de this
-const Titulo = (props) =>{
-    return(
-    <div>
-        <h1 className="previsao__data">{props.data}</h1>
-        <h2 className="previsao__resumo">{props.resumo}</h2>
-    </div>
-    )
-}
-
-const PrevisaoImg = (props) =>{
-    return(
-        <img className="previsao__img" src={props.imagem}/>
-    )
-}
-
-const Temperatura = (props) =>{
-    return(
-        <table className="previsao-temperatura" >
-            <tr className="previsao-temperatura__linha">
-                <th>
-                    Máxima:
-                </th>
-            <td>
-                {props.temperatura.max} ºc
-            </td>
-            </tr>
-                <tr className="previsao-temperatura__linha">
-                    <th>
-                        Mínima:
-                    </th>
-                    <td>
-                        {props.temperatura.min} ºc
-                    </td>
-                </tr>
-            </table> 
-    )
-}
 
 
 //class precisa de this
