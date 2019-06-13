@@ -20,27 +20,27 @@ class Comentario extends React.Component{
 }
 
 
-class App extends React.Component{
-    render(){
-    return (
-        <div>
-            <h1 className="titulo_reprograma">Reprograma-Chocolate 🍫</h1>
-            <Comentario 
-            imagem="https://t2.ea.ltmcdn.com/pt/images/3/9/6/img_meu_gatinho_chora_muito_e_normal_21693_600.jpg"
-            nome="Melina"
-            subtitulo="AMEI ESSE VÍDEO KERO D+++"
-            comentario="Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Aenean aliquam molestie leo, vitae iaculis nisl."
-            />
-            <Comentario 
-            imagem="https://static1.purebreak.com.br/articles/5/21/50/5/@/108524-spangles-e-um-gatinho-super-diapo-1.png"
-            nome="Joana"
-            subtitulo="Meh aChei NEEEM MAis Oi mEnOsx"
-            comentario="Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Aenean aliquam molestie leo, vitae iaculis nisl."
-            />
-        </div>
-        )
+    class App extends React.Component{
+        render(){
+        return (
+            <div>
+                <h1 className="titulo_reprograma">Reprograma-Chocolate 🍫</h1>
+                <Comentario 
+                imagem="https://t2.ea.ltmcdn.com/pt/images/3/9/6/img_meu_gatinho_chora_muito_e_normal_21693_600.jpg"
+                nome="Melina"
+                subtitulo="AMEI ESSE VÍDEO KERO D+++"
+                comentario="Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Aenean aliquam molestie leo, vitae iaculis nisl."
+                />
+                <Comentario 
+                imagem="https://static1.purebreak.com.br/articles/5/21/50/5/@/108524-spangles-e-um-gatinho-super-diapo-1.png"
+                nome="Joana"
+                subtitulo="Meh aChei NEEEM MAis Oi mEnOsx"
+                comentario="Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Aenean aliquam molestie leo, vitae iaculis nisl."
+                />
+            </div>
+            )
+        }
     }
-}
 
     ReactDOM.render(<App />, document.getElementById('root'));
 
